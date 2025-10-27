@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ljubimci</title>
+</head>
+<body>
+<h1>Lista ljubimaca</h1>
+
+<table border="1">
+    <tr>
+        <th>ID</th><th>Ime</th><th>Vrsta</th><th>Godine</th><th>Vlasnik</th><th>Akcija</th>
+    </tr>
+    <tr th:each="pet : ${pets}">
+        <td th:text="${pet.id}"></td>
+        <td th:text="${pet.name}"></td>
+        <td th:text="${pet.species}"></td>
+        <td th:text="${pet.age}"></td>
+        <td th:text="${pet.ownerName}"></td>
+        <td><a th:href="@{/pets/action/{id}(id=${pet.id})}">Pregled termina</a></td>
+    </tr>
+</table>
+
+<p><a href="/appointments">Prikaži sve termine</a></p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Svi termini</title>
+</head>
+<body>
+<h1>Lista svih termina</h1>
+
+<table border="1">
+    <tr>
+        <th>ID</th><th>Datum i vrijeme</th><th>Opis</th>
+    </tr>
+    <tr th:each="appt : ${appointments}">
+        <td th:text="${appt.id}"></td>
+        <td th:text="${appt.dateTime}"></td>
+        <td th:text="${appt.description}"></td>
+    </tr>
+</table>
+
+<p><a href="/pets">Nazad na ljubimce</a></p>
+</body>
+</html>

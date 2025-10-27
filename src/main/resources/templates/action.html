@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Termini ljubimca</title>
+</head>
+<body>
+<h1 th:text="'Termini za ' + ${pet.name}"></h1>
+
+<ul>
+    <li th:each="appt : ${appointments}">
+        <span th:text="${appt.dateTime}"></span> -
+        <span th:text="${appt.description}"></span>
+    </li>
+</ul>
+
+<p><a href="/pets">Nazad na listu ljubimaca</a></p>
+</body>
+</html>
