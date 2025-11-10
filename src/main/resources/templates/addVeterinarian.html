@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <form action="#" th:action="@{/veterinarians/add}" th:object="${veterinarian}" method="post">
+        Ime: <input type="text" th:field="*{name}" /><br/>
+        Specijalizacija: <input type="text" th:field="*{specialization}" /><br/>
+        <button type="submit">Sačuvaj</button>
+    </form>
+</head>
+<body>
+
+</body>
+</html>

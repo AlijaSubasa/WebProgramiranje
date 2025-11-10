@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <h1>Veterinari</h1>
+    <a href="/veterinarians/add">Dodaj novog</a>
+    <ul>
+        <li th:each="v : ${veterinarians}">
+            <span th:text="${v.name} + ' - ' + ${v.specialization}"></span>
+            <a th:href="@{/veterinarians/edit/{id}(id=${v.id})}">Uredi</a>
+        </li>
+    </ul>
+
+</head>
+<body>
+
+</body>
+</html>
